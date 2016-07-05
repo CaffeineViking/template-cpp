@@ -10,6 +10,7 @@ workspace (name)
     filter {"configurations:Debug"}
         defines {"DEBUG"}
         flags {"Symbols"}
+        -- symbols "On"
         optimize "Off"
     filter {"configurations:Release"}
         defines {"RELEASE"}
@@ -24,8 +25,9 @@ project (name)
 
 -- Program Testing Suite
 project (name.."-tests")
-    dependson({name})
     kind "ConsoleApp"
+    files {"src/**.cc"}
     files {"tests/**.cc"}
+    removefiles {"src/main.cc"}
     includedirs {"include"}
     -- links {"library"}
