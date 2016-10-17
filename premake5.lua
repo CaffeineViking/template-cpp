@@ -9,9 +9,8 @@ workspace (name)
     configurations {"Debug", "Release"}
     filter {"configurations:Debug"}
         defines {"DEBUG"}
-        flags {"Symbols"}
-        -- symbols "On"
         optimize "Off"
+        symbols "On"
     filter {"configurations:Release"}
         defines {"RELEASE"}
         optimize "Speed"
