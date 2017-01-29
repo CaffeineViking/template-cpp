@@ -1,7 +1,7 @@
 # Project Specific
 bin/
-build/
 lib/
+build/
 
 # Compiled Object files
 *.slo

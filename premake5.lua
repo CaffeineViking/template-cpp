@@ -1,4 +1,4 @@
--- premake5.lua
+-- Template C++ Build
 name = "template-cpp"
 workspace (name)
     language "C++"
@@ -20,7 +20,7 @@ project (name)
     kind "ConsoleApp"
     files {"src/**.cc"}
     includedirs {"include"}
-    -- links {"library"}
+    -- links {"libraries"}
 
 -- Program Testing Suite
 project (name.."-tests")
@@ -29,4 +29,4 @@ project (name.."-tests")
     files {"tests/**.cc"}
     removefiles {"src/main.cc"}
     includedirs {"include"}
-    -- links {"library"}
+    -- links {"libraries"}
