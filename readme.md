@@ -1,2 +1,2 @@
-template-cpp
+c++ template
 ============

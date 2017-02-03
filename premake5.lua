@@ -1,11 +1,11 @@
--- Template C++ Build
-name = "template-cpp"
+---- premake5.lua
+name = "template"
 workspace (name)
     language "C++"
     flags {"C++14"}
-    targetdir "bin"
     location "build"
     warnings "Extra"
+    -- platforms {"Static", "Shared"}
     configurations {"Debug", "Release"}
     filter {"configurations:Debug"}
         defines {"DEBUG"}
@@ -14,19 +14,36 @@ workspace (name)
     filter {"configurations:Release"}
         defines {"RELEASE"}
         optimize "Speed"
+        symbols "Off"
 
--- The Program
+------ Program
 project (name)
-    kind "ConsoleApp"
-    files {"src/**.cc"}
+    targetdir "bin"
+    kind "WindowedApp"
+    files {"src/main.cc"}
+    files {"src/"..name.."/**.cc"}
     includedirs {"include"}
-    -- links {"libraries"}
+    -- links {"library"}
 
--- Program Testing Suite
-project (name.."-tests")
-    kind "ConsoleApp"
-    files {"src/**.cc"}
-    files {"tests/**.cc"}
-    removefiles {"src/main.cc"}
-    includedirs {"include"}
-    -- links {"libraries"}
+-- ------ Library
+-- project (name)
+--     targetdir "lib"
+--     files {"src/"..name.."/**.cc"}
+--     includedirs {"include"}
+--     -- links {"library"}
+--     filter {"platforms:Static"}
+--         defines {"STATIC"}
+--         kind "StaticLib"
+--     filter {"platforms:Shared"}
+--         defines {"SHARED"}
+--         kind "SharedLib"
+
+-- ---------------- Testing
+-- project (name.."-tests")
+--     targetdir "bin"
+--     kind "ConsoleApp"
+--     files {"tests/**.cc"}
+--     removefiles {"src/main.cc"}
+--     files {"src/"..name.."/**.cc"}
+--     includedirs {"include"}
+--     -- links {"library"}
