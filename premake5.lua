@@ -38,12 +38,13 @@ project (name)
 --         defines {"SHARED"}
 --         kind "SharedLib"
 
--- ---------------- Testing
--- project (name.."-tests")
---     targetdir "bin"
---     kind "ConsoleApp"
---     files {"tests/**.cc"}
---     removefiles {"src/main.cc"}
---     files {"src/"..name.."/**.cc"}
---     includedirs {"include"}
---     -- links {"library"}
+---------------- Testing
+project (name.."-tests")
+    targetdir "bin"
+    kind "ConsoleApp"
+    files {"tests/main.cc"}
+    removefiles {"src/main.cc"}
+    files {"tests/"..name.."**.cc"}
+    files {"src/"..name.."/**.cc"}
+    includedirs {"include"}
+    -- links {"library"}
