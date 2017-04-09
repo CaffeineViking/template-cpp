@@ -7,10 +7,12 @@ workspace (name)
     warnings "Extra"
     -- platforms {"Static", "Shared"}
     configurations {"Debug", "Release"}
+
     filter {"configurations:Debug"}
         defines {"DEBUG"}
         optimize "Off"
         symbols "On"
+
     filter {"configurations:Release"}
         defines {"RELEASE"}
         optimize "Speed"
@@ -31,9 +33,11 @@ project (name)
 --     files {"src/"..name.."/**.cc"}
 --     includedirs {"include"}
 --     -- links {"library"}
+--
 --     filter {"platforms:Static"}
 --         defines {"STATIC"}
 --         kind "StaticLib"
+--
 --     filter {"platforms:Shared"}
 --         defines {"SHARED"}
 --         kind "SharedLib"

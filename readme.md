@@ -36,6 +36,8 @@ Structure
 * `tests`: source code for the project's testing suite, using Catch syntax.
     * `project directories`: project specific testing suite for one build.
 
+* `utils`: any sort of helper scripts or similar should be over here.
+
 Building
 --------
 
@@ -50,3 +52,5 @@ Building
 5. When complete, either `bin` or `lib` are built.
 
 6. Tests can be run with `bin/*-tests` program.
+
+7. **Shortcuts:** `make run` and `make test`.
