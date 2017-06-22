@@ -2,9 +2,9 @@
 name = "template"
 workspace (name)
     language "C++"
-    flags {"C++14"}
     location "build"
     warnings "Extra"
+    cppdialect "C++14"
     -- platforms {"Static", "Shared"}
     configurations {"Debug", "Release"}
 
