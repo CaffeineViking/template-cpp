@@ -1,5 +1,5 @@
----- premake5.lua
-name = "template"
+--- premake5.lua
+name = "project"
 workspace (name)
     language "C++"
     location "build"

@@ -2,6 +2,10 @@
 bin/
 lib/
 build/
+docs/latex/
+docs/build/
+docs/reference/
+docs/manual.pdf
 
 # Compiled Object files
 *.slo
