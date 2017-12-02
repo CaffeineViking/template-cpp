@@ -1,4 +1,3 @@
---- premake5.lua
 name = "project"
 workspace (name)
     language "C++"
