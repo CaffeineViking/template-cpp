@@ -1,5 +1,6 @@
 config="debug"
 # config="debug_static"
+
 all: FORCE
 	premake5 gmake
 	make -j8 -C build config=${config}

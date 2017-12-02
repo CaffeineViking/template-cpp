@@ -23,21 +23,27 @@ project (name)
     targetdir "bin"
     kind "WindowedApp"
     files {"src/main.cc"}
+    files {"foreign/src/**.c"}
+    files {"foreign/src/**.cpp"}
     files {"src/"..name.."/**.cc"}
+    includedirs {"foreign/include"}
     includedirs {"include"}
     -- links {"library"}
 
 -- ------ Library
 -- project (name)
 --     targetdir "lib"
+--     files {"foreign/src/**.c"}
+--     files {"foreign/src/**.cpp"}
 --     files {"src/"..name.."/**.cc"}
+--     includedirs {"foreign/include"}
 --     includedirs {"include"}
 --     -- links {"library"}
---
+-- 
 --     filter {"platforms:Static"}
 --         defines {"STATIC"}
 --         kind "StaticLib"
---
+-- 
 --     filter {"platforms:Shared"}
 --         defines {"SHARED"}
 --         kind "SharedLib"
@@ -47,8 +53,10 @@ project (name.."-tests")
     targetdir "bin"
     kind "ConsoleApp"
     files {"tests/main.cc"}
-    removefiles {"src/main.cc"}
-    files {"tests/"..name.."**.cc"}
+    files {"foreign/src/**.c"}
+    files {"foreign/src/**.cpp"}
     files {"src/"..name.."/**.cc"}
+    files {"tests/"..name.."**.cc"}
+    includedirs {"foreign/include"}
     includedirs {"include"}
     -- links {"library"}
