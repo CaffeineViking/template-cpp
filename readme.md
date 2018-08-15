@@ -7,7 +7,7 @@ Compiling and Testing
 ---------------------
 
 1. Place yourself in the root directory of this project.
-2. Run `git submodule update --init --recursive` for modules.
+2. Execute `git submodule update --init --recursive`.
 3. Acquire the latest version of the `premake5` build system.
 4. Thereafter, execute `premake5 gmake` if building on Make.
 5. Finally, issue the command `make -j8 -C build` and wait.
