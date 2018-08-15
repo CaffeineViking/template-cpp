@@ -7,12 +7,13 @@ Compiling and Testing
 ---------------------
 
 1. Place yourself in the root directory of this project.
-2. Acquire the latest version of the `premake5` build system.
-3. Thereafter, execute `premake5 gmake` if building on Make.
-4. Finally, issue the command `make -j8 -C build` and wait.
-5. When complete, either `bin` or `lib` have been built.
-6. Tests can be run with the `bin/*-tests` programs.
-7. **Shortcuts:** `make run` and `make test`.
+2. Run `git submodule update --init --recursive` for modules.
+3. Acquire the latest version of the `premake5` build system.
+4. Thereafter, execute `premake5 gmake` if building on Make.
+5. Finally, issue the command `make -j8 -C build` and wait.
+6. When complete, either `bin` or `lib` have been built.
+7. Tests can be run with the `bin/*-tests` programs.
+8. **Shortcuts:** `make run` and `make test`.
 
 Usage and Documents
 -------------------
