@@ -39,8 +39,6 @@ Structure
     * `*.make`: program specific make config for augmenting `Makefile`.
 * `docs`: any generated documentation for this project is over here.
 * `foreign`: external headers and source for libraries and Catch.
-    * `include`: the external header files should go here.
-    * `src`: the external source code should go over here.
 * `include`: only internal headers from this project should go here.
     * `project directories`: internal headers for the project.
 * `lib`: any generated libraries from the project reside here.
