@@ -56,6 +56,7 @@ project (name.."-tests")
     files {"foreign/src/**.cpp"}
     files {"src/"..name.."/**.cc"}
     files {"tests/"..name.."**.cc"}
+    includedirs {"foreign/catch/single_include/catch2"}
     includedirs {"foreign/include"}
     includedirs {"include"}
     -- links {"library"}
